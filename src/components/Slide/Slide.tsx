@@ -6,13 +6,13 @@ type SlideProps = {
   list: string[];
 }
 
-export const Slide: React.FC<SlideProps> = ({ image, title, list}) => {
+export const Slide: React.FC<SlideProps> = ({ image, title, list}) => {  
   return (
     <div className="relative h-full bg-dark-red rounded-medium text-white-milky
       before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-black/20 before:rounded-medium
     ">
       <div className="relative z-10">
-        <img className="w-full aspect-square laptop:aspect-[2.25] object-cover object-center rounded-t-medium" src={`src/assets/img/${image}`} alt="" />
+        <img className="w-full aspect-square laptop:aspect-[2.25] object-cover object-center rounded-t-medium" src={new URL(`../../assets/img/${image}`, import.meta.url).href} alt="" />
 
         <div className="px-20 py-24 laptop:p-40">
           <div className="">
