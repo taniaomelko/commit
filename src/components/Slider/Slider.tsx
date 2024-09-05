@@ -8,6 +8,44 @@ import { Slide } from '../Slide/Slide';
 import './Slider.scss';
 import { ArrowRightIcon } from '../icons';
 
+const slidesData = [
+  {
+    image: "slider-image-1.webp",
+    title: "250+ Корпоративних сайтів",
+    list: [
+      "стартапи",
+      "фінансові та юридичні послуги",
+      "медичні послуги",
+      "бізнес-конференції",
+      "туристичні послуги",
+      "сільськогосподарська продукція"
+    ]
+  },
+  {
+    image: "slider-image-2.webp",
+    title: "150+ Інтернет-магазинів",
+    list: [
+      "одяг та взуття",
+      "побутова техніка",
+      "косметика та парфумерія",
+      "бізнес-конференції",
+      "електроніка",
+      "продукти харчування"
+    ]
+  },
+  {
+    image: "slider-image-3.webp",
+    title: "300+ Лендінгів",
+    list: [
+      "інтернет-маркетинг",
+      "вебінари",
+      "онлайн-тренінги",
+      "IT-послуги",
+      "освітні програми та івенти"
+    ]
+  }
+];
+
 export const Slider: React.FC = () => {
   return (
     <section className="pt-10 pl-10 laptop:pl-20 pb-40 laptop:pb-20">
@@ -29,47 +67,15 @@ export const Slider: React.FC = () => {
         scrollbar={{ draggable: true }}
         className="h-full pb-30 laptop:pb-[92px]"
       >
-        <SwiperSlide className="h-auto">
-          <Slide
-            image="slider-image-1.webp"
-            title="250+ Корпоративних сайтів"
-            list={[
-              "стартапи",
-              "фінансові та юридичні послуги",
-              "медичні послуги",
-              "бізнес-конференції",
-              "туристичні послуги",
-              "сільськогосподарська продукція"
-            ]}
-          />
-        </SwiperSlide>
-        <SwiperSlide className="h-auto">
-          <Slide
-            image="slider-image-2.webp"
-            title="150+ Інтернет-магазинів"
-            list={[
-              "одяг та взуття",
-              "побутова техніка",
-              "косметика та парфумерія",
-              "бізнес-конференції",
-              "електроніка",
-              "продукти харчування"
-            ]}
-          />
-        </SwiperSlide>
-        <SwiperSlide className="h-auto">
-          <Slide
-            image="slider-image-3.webp"
-            title="300+ Лендінгів"
-            list={[
-              "інтернет-маркетинг",
-              "вебінари",
-              "онлайн-тренінги",
-              "IT-послуги",
-              "освітні програми та івенти"
-            ]}
-          />
-        </SwiperSlide>
+        {slidesData.map((slide, index) => (
+          <SwiperSlide key={index} className="h-auto">
+            <Slide
+              image={slide.image}
+              title={slide.title}
+              list={slide.list}
+            />
+          </SwiperSlide>
+        ))}
 
         <div className="swiper-custom-navigation">
           <div className="swiper-custom-button-prev">
