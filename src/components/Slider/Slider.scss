@@ -1,0 +1,17 @@
+.swiper-custom-navigation {
+  @apply absolute top-[calc(calc(100vw_-_20px)_/_1.05)] laptop:top-1/2 transform -translate-y-full z-10 p-20 w-[calc(100%_/_1.05)] laptop:w-[calc(100%_/_1.1)] flex justify-between;
+}
+
+.swiper-custom-button-prev,
+.swiper-custom-button-next {
+  @apply w-40 h-40 laptop:w-60 laptop:h-60 border laptop:border-2 border-white-milky rounded-full flex justify-center items-center text-white-milky cursor-pointer transition-colors hover:bg-white-milky hover:text-red;
+}
+
+.swiper-scrollbar {
+  @apply bg-light-grey laptop:mb-34;
+  @apply left-0 bottom-0 h-18 laptop:h-24 #{!important};
+}
+
+.swiper-scrollbar-drag {
+  @apply bg-red border-2 border-light-grey cursor-grab;
+}

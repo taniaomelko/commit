@@ -1,0 +1,12 @@
+body {
+  @apply font-darker-grotesque text-16 leading-15 text-black-primary;
+  @apply dark:bg-black-primary dark:text-white;
+}
+
+a {
+  @apply transition-colors hover:text-red;
+}
+
+.container {
+  @apply max-w-1400 !important;
+}
