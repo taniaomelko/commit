@@ -11,7 +11,7 @@ export const Tile: React.FC<TileProps> = ({ number, text }) => {
       <p className="mb-8 font-mustica-pro text-40 laptop:text-68 leading-12 font-semibold text-red">
         {number}
       </p>
-      <p className="font-mustica-pro text-20 laptop:text-34 leading-10 font-semibold ">
+      <p className="font-mustica-pro text-20 laptop:text-34 leading-10 font-semibold text-black-primary">
         {text}
       </p>
     </div>
