@@ -1,6 +1,8 @@
 import React from 'react';
 import { LinkedInIcon, InstagramIcon, FacebookIcon } from '../icons';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 export const Footer: React.FC = () => {
   return (
     <footer className="py-20 tablet:py-60 laptop:px-80 bg-black-primary text-white">
@@ -8,7 +10,7 @@ export const Footer: React.FC = () => {
         <div className="grid gap-40 mobile:grid-cols-2 tablet:grid-cols-3 desktop:grid-cols-[repeat(30,_minmax(0,_1fr))]">
           <div className="mobile:col-span-2 tablet:col-span-3 desktop:col-span-9">
             <div className="flex flex-col gap-40 justify-between h-full">
-              <a href="/" className="font-syne text-[33.15px] leading-125 font-bold tracking-[0.28px] uppercase text-white-milky">
+              <a href={BASE_URL} className="font-syne text-[33.15px] leading-125 font-bold tracking-[0.28px] uppercase text-white-milky">
                 Commit
               </a>
               <p className="font-mustica-pro text-24 leading-13">
