@@ -54,6 +54,7 @@ export default {
       height: {
         10: '10px',
         18: '18px',
+        22: '22px',
         24: '24px',
         40: '40px',
         60: '60px',
@@ -61,6 +62,7 @@ export default {
       width: {
         10: '10px',
         24: '24px',
+        26: '26px',
         40: '40px',
         60: '60px',
       },
